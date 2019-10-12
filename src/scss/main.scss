@@ -1,0 +1,13 @@
+@import './settings/colors';
+@import './settings/font';
+@import './components/navbar';
+@import './components/homeheader';
+
+body {
+    font-family: $font-base;
+}
+
+.App {
+    width: 100%;
+    position: relative;
+}
