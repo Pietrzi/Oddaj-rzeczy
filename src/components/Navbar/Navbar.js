@@ -1,19 +1,60 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+import { Link } from "react-scroll";
 
 const Navbar = () => {
     return (
         <nav>
             <ul className="small__nav">
-                <li><Link to='/logowanie' className="small__nav__link">Zalogój</Link></li>
-                <li><Link to='/rejestracja' className="small__nav__link">Załóż konto</Link></li>
+                <li><NavLink to='/logowanie' className="small__nav__link">Zalogój</NavLink></li>
+                <li><NavLink to='/rejestracja' className="small__nav__link">Załóż konto</NavLink></li>
             </ul>
             <ul className="big__nav">
-                <li><a href="#">Start</a></li>
-                <li><a href="#">O co chodzi?</a></li>
-                <li><a href="#">O nas</a></li>
-                <li><a href="#">Fundacje i organizacje</a></li>
-                <li><a href="#">Kontakt</a></li>
+            
+
+
+
+
+<li><Link
+    activeClass="active"
+    to="header"
+    spy={true}
+    smooth={true}
+    offset={0}
+    duration= {500}
+>Start</Link></li>
+<li><Link
+    activeClass="active"
+    to="three"
+    spy={true}
+    smooth={true}
+    offset={0}
+    duration= {500}
+>O co chodzi</Link></li>
+<li><Link
+    activeClass="active"
+    to="about"
+    spy={true}
+    smooth={true}
+    offset={0}
+    duration= {500}
+>O nas</Link></li>
+<li><Link
+    activeClass="active"
+    to="help"
+    spy={true}
+    smooth={true}
+    offset={0}
+    duration= {500}
+>Fundacja i organizacje</Link></li>
+<li><Link
+    activeClass="active"
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={0}
+    duration= {500}
+>Kontakt</Link></li>
             </ul>
         </nav>
     )

@@ -12,8 +12,8 @@ export default function home() {
             <HomeHeader />
             <HomeThreeColumns />
             <HomeFourSteps />
-            <HomeHelp />
             <HomeAbout />
+            <HomeHelp />
             <HomeContact />
         </div>
     )

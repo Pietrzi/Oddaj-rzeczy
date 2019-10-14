@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function HomeThreeColumns() {
     return (
-        <div className="homethreecolumns__wrapper">
+        <div className="homethreecolumns__wrapper" id="three">
             <div className="column__wrapper">
                 <p className="big__number">5</p>
                 <p className="column__title">oddanych worków</p>

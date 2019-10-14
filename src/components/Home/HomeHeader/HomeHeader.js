@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 const HomeHeader = () => {
     return (
-        <div className="homeheader__wrapper">
+        <div className="homeheader__wrapper" id="header">
             <div className="header__picture"></div>
             <div className="header__content">
                 <div className="header__titles">
@@ -12,7 +12,7 @@ const HomeHeader = () => {
                 </div>
                 <div className="svg"></div>
                 <div className="buttons__box">
-                    <Link to='/oddaj-rzeczy' className='buttons'>oddaj rzeczy</Link>
+                    <Link to='/oddaj-rzeczy' className='buttons'>oddaj<br></br>rzeczy</Link>
                     <Link to='/oddaj-rzeczy' className='buttons'>zorganizuj zbiórkę</Link>
                 </div>
             </div>

@@ -1,0 +1,95 @@
+.homehelp__wrapper {
+    width: 100%;
+    text-align: center;
+    color: $grey;
+
+    .help__title {
+        margin-top: 60px;
+        font-size: 38px;
+    }
+
+    .help__svg {
+        width: 180px;
+        height: 40px;
+        background-image: url('../../assets/Decoration.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 30px auto;
+    }
+
+    .ul__titles {
+        margin: 10px auto;
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+            height: 60px;
+            width: 200px;
+            border: 1px solid $grey;
+            font-size: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+    }
+
+    .help__text {
+        width: 500px;
+        margin: 40px auto;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .help__box {
+        width: 1100px;
+        margin: 10px auto;
+        font-family: $font-alt;
+
+        .one__box {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+
+            .left__box {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .box__title {
+                    font-size: 18px;
+                }
+
+                .left__box__text {
+                    font-size: 13px;
+                }
+            }
+
+            .right__box {
+
+                .box__right__text {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .ul__numbers {
+        margin: 20px auto;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+            padding: 15px;
+            border: 1px solid $grey;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

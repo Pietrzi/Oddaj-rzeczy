@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-export default function HomeFourSteps() {
+const HomeFourSteps = () => {
     return (
         <div className="homefoursteps__wrapper">
             <p className="homefoursteps__title">Wystarczą 4 proste kroki</p>
@@ -31,6 +32,9 @@ export default function HomeFourSteps() {
                     <div className="column__text">kurier przyjedzie w dogodnym momencie</div>
                 </div>
             </div>
+            <Link to='/logowanie' className='buttons'>oddaj<br></br>rzeczy</Link>
         </div>
     )
 }
+
+export default withRouter(HomeFourSteps);
