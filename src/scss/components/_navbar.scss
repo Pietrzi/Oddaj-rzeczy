@@ -11,10 +11,11 @@ nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 70px;
-    font-size: 13px;
+    font-size: 14px;
 
     li {
         list-style-type: none;
+        margin-top: 46px;
  
         .small__nav__link {
             text-decoration: none;
@@ -22,10 +23,11 @@ nav {
             margin-top: 5px;
             margin-left: 25px;
             padding: 5px 12px;
+            border: 1px solid rgba($yellow, $alpha: 0);
 
             &:hover {
                 cursor: pointer;
-                border: 1px solid $yellow;
+                border: 1px solid rgba($yellow, $alpha: 1.0);
             }
         }
     }
@@ -41,6 +43,7 @@ nav {
 
     li {
         list-style-type: none;
+        margin-top: 25px;
         
         a {
             text-decoration: none;
@@ -48,9 +51,10 @@ nav {
             margin-top: 5px;
             margin-left: 25px;
             padding: 5px 12px;
+            border: 1px solid rgba($dark-grey, $alpha: 0);
 
             &:hover {
-                border: 1px solid $dark-grey;
+                border: 1px solid rgba($dark-grey, $alpha: 1.0);
             }
         }
     }

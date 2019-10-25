@@ -7,6 +7,7 @@ const HomeFourSteps = () => {
             <p className="homefoursteps__title">Wystarczą 4 proste kroki</p>
             <div className="homefoursteps__svg"></div>
             <div className="homefoursteps__columns__wrapper">
+              <div className="homefoursteps__columns__content__wrapper">
                 <div className="homefoursteps__column">
                     <div className="column__svg1"></div>
                     <p className="column__title">Wybierz rzeczy</p>
@@ -31,6 +32,7 @@ const HomeFourSteps = () => {
                     <hr></hr>
                     <div className="column__text">kurier przyjedzie w dogodnym momencie</div>
                 </div>
+              </div>
             </div>
             <Link to='/logowanie' className='buttons'>oddaj<br></br>rzeczy</Link>
         </div>

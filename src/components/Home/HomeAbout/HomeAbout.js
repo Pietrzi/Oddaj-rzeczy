@@ -6,7 +6,7 @@ export default function HomeAbout() {
             <div className="about__left">
                 <p className="about__title">O nas</p>
                 <div className="about__svg"></div>
-                <p className="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iure omnis facilis delectus obcaecati harum hic excepturi facere laudantium qui accusamus voluptates possimus, illum ex.</p>
+                <p className="about__text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                 <div className="about__signature"></div>
             </div>
             <div className="about__right"></div>

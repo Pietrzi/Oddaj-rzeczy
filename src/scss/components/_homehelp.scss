@@ -26,10 +26,10 @@
 
         li {
             list-style-type: none;
-            height: 60px;
-            width: 200px;
+            height: 70px;
+            width: 210px;
             border: 1px solid $grey;
-            font-size: 21px;
+            font-size: 24px;
             display: flex;
             justify-content: center;
             align-items: center
@@ -37,9 +37,10 @@
     }
 
     .help__text {
-        width: 500px;
+        width: 600px;
         margin: 40px auto;
-        font-size: 19px;
+        font-size: 22px;
+        line-height: 1.1em;
         text-align: center;
     }
 
@@ -61,18 +62,21 @@
                 justify-content: center;
 
                 .box__title {
-                    font-size: 18px;
+                    font-size: 26px;
+                    font-weight: 300;
                 }
 
                 .left__box__text {
-                    font-size: 13px;
+                    font-size: 18px;
+                    font-weight: 300;
                 }
             }
 
             .right__box {
 
                 .box__right__text {
-                    font-size: 13px;
+                    font-size: 18px;
+                    font-weight: 300;
                 }
             }
         }
