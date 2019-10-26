@@ -51,11 +51,15 @@
         p {
             margin-right: auto;
             margin-left: auto;
+            position: relative;
+            left: 30px;
         }
 
         .bottom__icons {
-            margin-right: 100px;
+            //margin-right: 100px;
             font-size: 30px;
+            position: relative;
+            right: 100px;
 
             i {
                 margin-left: 20px;
