@@ -34,6 +34,12 @@
                 background-repeat: no-repeat;
                 margin: 26px auto;
             }
+
+            .succes {
+                margin: 0 auto 20px;
+                color: green;
+                font-size: 15px;
+            }
         }
     }
 
@@ -76,13 +82,16 @@ form {
         display: inline-block;
         width: 50%;
 
+        .labels {
+            margin-bottom: 10px;
+        }
+
         input {
             width: 210px;
             background: none;
             border: none;
             border-bottom: 1px solid lightgrey;
             padding-right: 5px;
-            margin-bottom: 30px;
         }
 
         input::placeholder {
@@ -108,11 +117,14 @@ form {
         font-size: 18px;
         width: 150px;
         height: 50px;
-        margin-top: 30px;
         border: 1px solid $dark-grey;
         position: relative;
         left: 290px;
     }
 
-
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
 }

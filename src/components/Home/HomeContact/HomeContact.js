@@ -2,36 +2,87 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 
 class HomeContact extends React.Component {
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         option: 'fundacje',
-    //         fundacje: [
-    //             {name: 'Fundacja "Dbam o Zdrowie"', target: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej', what: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'},
-    //             {name: 'Fundacja "Dla dzieci"', target: 'Cel i misja: Pomoc dzieciom z ubogich rodzin', what: 'ubrania, meble, zabawki'},
-    //             {name: 'Fundacja "Bez domu"', target: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania', what: 'ubrania, jedzenie, ciepłe koce'},
-    //             {name: 'Fundacja "Dbam o Zdrowie"', target: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej', what: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'},
-    //             {name: 'Fundacja "Dla dzieci"', target: 'Cel i misja: Pomoc dzieciom z ubogich rodzin', what: 'ubrania, meble, zabawki'},
-    //             {name: 'Fundacja "Dbam o Zdrowie"', target: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej', what: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'},
-    //             {name: 'Fundacja "Dbam o Zdrowie"', target: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej', what: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'},
-    //             {name: 'Fundacja "Bez domu"', target: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania', what: 'ubrania, jedzenie, ciepłe koce'},
-    //             {name: 'Fundacja "Dbam o Zdrowie"', target: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej', what: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'}
-    //         ],
-    //         organizacje: [
-    //             {name: 'Organizacja Lorem 1', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Organizacja Lorem 2', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Organizacja Lorem 3', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Organizacja Lorem 4', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Organizacja Lorem 5', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Organizacja Lorem 6', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'}
-    //         ],
-    //         lokalne: [
-    //             {name: 'Zbiórka Lorem 1', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Zbiórka Lorem 2', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'},
-    //             {name: 'Zbiórka Lorem 3', target: 'jasf sdfsiufh  sdkfs skdfj skj', what: 'lijsf, lskfofff, iasi, oiwef'}
-    //         ]
+    constructor() {
+        super();
+        this.state = {
+           verification: false,
+           name: "",
+           email: "",
+           text: "",
+           nameError: "",
+           emailError: "",
+           textError: "",
+           succesText1: "",
+           succesText2: ""
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange = e => {
+        const name = e.target.name;
+        this.setState({
+            [name]: e.target.value
+        });
+        e.target.value = ""
+    }
+
+    handleChangeText = e => {
+        this.setState({
+            text: e.target.value
+        })
+    }
+
+    validate = () => {
+
+    //     const patterns = {
+    //         username: /^[a-z\d]{3,12}$/i,
+    //         email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+    //         text: /^.{120,}$/
+    // };
+
+    //     let nameError = "";
+    //     let emailError = "";
+    //     let textError = ""
+
+    //     const { name, email, text } = this.state;
+
+    //     if (!name.test(patterns.username) === false) {
+    //         nameError = "Podane imię jest nieprawidłowe!";
+    //         this.setState({ nameError })
+    //         return false;
     //     }
-    // }
+
+    //     if (!email.test(patterns.email)) {
+    //         emailError = "Podany email jest nieprawidłowy!";
+    //         this.setState({ emailError })
+    //         return false;
+    //     }
+
+    //     if (!text.test(patterns.text)) {
+    //         textError = "Wiadomość musi mieć conajmniej 120 znaków!";
+    //         this.setState({ textError })
+    //         return false;
+    //     }
+
+        return true;
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        const isValid = this.validate();
+        if (isValid) {
+            this.setState({
+                succesText1: "Wiadomość została wysłana!",
+                succesText2: "Wkrótce się skontaktujemy.",
+                verification: true
+            })
+        }
+        if (this.state.verification) {
+            console.log(this.state);
+        }
+    }
 
     render() {
         return (
@@ -40,18 +91,25 @@ class HomeContact extends React.Component {
                     <div className="form__wrapper">
                         <p className="form__title">Skontaktuj się z nami</p>
                         <div className="form__svg"></div>
-                        <form>
+                        <div className="succes">
+                            <p>{this.state.succesText1}</p>
+                            <p>{this.state.succesText2}</p>
+                        </div>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="form__el">
-                                <p>Wpisz swoje imię</p>
-                                <input type="text" name="name" placeholder="Krzysztof"/>
+                                <p className="labels">Wpisz swoje imię</p>
+                                <input onChange={this.handleChange} type="text" name="name" placeholder="Krzysztof" value={this.state.name}/>
+                                <p className="error">{this.state.nameError}</p>
                             </div>
                             <div className="form__el">
-                                <p>Wpisz swój email</p>
-                                <input type="text" name="email" placeholder="abc@def.pl"/>
+                                <p className="labels">Wpisz swój email</p>
+                                <input onChange={this.handleChange} type="text" name="email" placeholder="abc@def.pl" value={this.state.email}/>
+                                <p className="error">{this.state.emailError}</p>
                             </div >
                             <div className="form__textarea">
-                                <p>Wpisz swoją wiadomość</p>
-                                <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
+                                <p className="labels">Wpisz swoją wiadomość</p>
+                                <textarea onChange={this.handleChangeText} value={this.state.text} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
+                                <p className="error">{this.state.textError}</p>
                             </div>
                             <input className="form__button" type="submit" value="Wyślij"/>
                         </form>
@@ -72,3 +130,9 @@ class HomeContact extends React.Component {
 
 
 export default HomeContact;
+
+        //    nameError: "Podane imię jest nieprawidłowe!",
+        //    emailError: "Podany email jest nieprawidłowy!",
+        //    textError: "Wiadomość musi mieć conajmniej 120 znaków!",
+        //    succesText1: "Wiadomość została wysłana!",
+        //    succesText2: "Wkrótce się skontaktujemy."    

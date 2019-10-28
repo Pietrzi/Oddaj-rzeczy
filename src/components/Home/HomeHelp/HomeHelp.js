@@ -1,5 +1,5 @@
 import React from 'react';
-import { tsNamespaceExportDeclaration } from '@babel/types';
+import { NavLink } from 'react-router-dom';
 
 class HomeHelp extends React.Component {
     constructor() {
@@ -84,14 +84,14 @@ class HomeHelp extends React.Component {
         const items = currentItems.map((item, i) => {
             return (
                 <div className="one__box" key={i}>
-                        <div className="left__box">
-                            <p className="box__title">{item.name}</p>
-                            <p className="box__left__text">{item.target}</p>
-                        </div>
-                        <div className="right__box">
-                        <p className="box__right__text">{item.what}</p>
-                        </div>
+                    <div className="left__box">
+                        <p className="box__title">{item.name}</p>
+                        <p className="box__left__text">{item.target}</p>
                     </div>
+                    <div className="right__box">
+                    <p className="box__right__text">{item.what}</p>
+                    </div>
+                </div>
             )
         })
 
@@ -107,48 +107,18 @@ class HomeHelp extends React.Component {
                 <p className="help__title">Komu pomagamy?</p>
                 <div className="help__svg"></div>
                 <ul className="ul__titles">
-                    <li onClick={this.changeFun}>Fundacjom</li>
-                    <li onClick={this.changeOrg}>Organizacjom<br></br>pozarządowym</li>
-                    <li onClick={this.changeLoc}>Lokalnym<br></br>zbiórkom</li>
+                    <NavLink to="/" className="option" onClick={this.changeFun}>Fundacjom</NavLink>
+                    <NavLink to="/" className="option" onClick={this.changeOrg}>Organizacjom<br></br>pozarządowym</NavLink>
+                    <NavLink to="/" className="option" onClick={this.changeLoc}>Lokalnym<br></br>zbiórkom</NavLink>
                 </ul>
                 <p className="help__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
                 
                 
                 <div className="help__box">
                     {items}
-                    {/* <div className="one__box">
-                        <div className="left__box">
-                            <p className="box__title">Fundacja "Dbam o Zdrowie"</p>
-                            <p className="box__left__text">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej</p>
-                        </div>
-                        <div className="right__box">
-                        <p className="box__right__text">ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                        </div>
-                    </div>
-                    <div className="one__box">
-                        <div className="left__box">
-                            <p className="box__title">Fundacja "Dla dzieci"</p>
-                            <p className="box__left__text">Cel i miasja: Pomoc dzieciom z ubogich rodzin</p>
-                        </div>
-                        <div className="right__box">
-                        <p className="box__right__text">ubrania, meble, zabawki</p>
-                        </div>
-                    </div>
-                    <div className="one__box">
-                        <div className="left__box">
-                            <p className="box__title">Fundacja "Bez domu"</p>
-                            <p className="box__left__text">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</p>
-                        </div>
-                        <div className="right__box">
-                        <p className="box__right__text">ubrania, jedzenie, ciepłe koce</p>
-                        </div> */}
-                    {/* </div> */}
                 </div>
                 <ul className="ul__numbers">
                     {pageNumbers}
-                    {/* <li>1</li>
-                    <li>2</li>
-                    <li>3</li> */}
                 </ul>
             </div>
         )

@@ -24,7 +24,9 @@
         justify-content: space-between;
         align-items: center;
 
-        li {
+        .option {
+            text-decoration: none;
+            color: $dark-grey;
             list-style-type: none;
             height: 70px;
             width: 210px;
@@ -34,6 +36,10 @@
             justify-content: center;
             align-items: center
         }
+
+        // .active {
+        //     border: 1px solid red;
+        // }
     }
 
     .help__text {
@@ -49,11 +55,21 @@
         margin: 10px auto;
         font-family: $font-alt;
 
+        
+
         .one__box {
             height: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &:nth-child(1) {
+                border-bottom: 1px solid $grey;
+            }
+
+            &:nth-child(2) {
+                border-bottom: 1px solid $grey;
+            }
 
             .left__box {
                 display: flex;
