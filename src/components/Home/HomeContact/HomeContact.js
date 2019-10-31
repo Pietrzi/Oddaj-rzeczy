@@ -36,35 +36,35 @@ class HomeContact extends React.Component {
 
     validate = () => {
 
-    //     const patterns = {
-    //         username: /^[a-z\d]{3,12}$/i,
-    //         email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
-    //         text: /^.{120,}$/
-    // };
+        const patterns = {
+            username: /^[a-z\d]{3,12}$/i,
+            email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+            text: /^.{120,}$/
+    };
 
-    //     let nameError = "";
-    //     let emailError = "";
-    //     let textError = ""
+        let nameError = "";
+        let emailError = "";
+        let textError = ""
 
-    //     const { name, email, text } = this.state;
+        const { name, email, text } = this.state;
 
-    //     if (!name.test(patterns.username) === false) {
-    //         nameError = "Podane imię jest nieprawidłowe!";
-    //         this.setState({ nameError })
-    //         return false;
-    //     }
+        if (!patterns.username.test(name)) {
+            nameError = "Podane imię jest nieprawidłowe!";
+            this.setState({ nameError })
+            return false;
+        }
 
-    //     if (!email.test(patterns.email)) {
-    //         emailError = "Podany email jest nieprawidłowy!";
-    //         this.setState({ emailError })
-    //         return false;
-    //     }
+        if (!patterns.email.test(email)) {
+            emailError = "Podany email jest nieprawidłowy!";
+            this.setState({ emailError })
+            return false;
+        }
 
-    //     if (!text.test(patterns.text)) {
-    //         textError = "Wiadomość musi mieć conajmniej 120 znaków!";
-    //         this.setState({ textError })
-    //         return false;
-    //     }
+        if (!patterns.text.test(text)) {
+            textError = "Wiadomość musi mieć conajmniej 120 znaków!";
+            this.setState({ textError })
+            return false;
+        }
 
         return true;
     }
@@ -72,6 +72,12 @@ class HomeContact extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
+        const { name, email, text } = this.state;
+        const data = {
+            "name": name,
+            "email": email,
+            "message": text
+        }
         if (isValid) {
             this.setState({
                 succesText1: "Wiadomość została wysłana!",
@@ -80,7 +86,16 @@ class HomeContact extends React.Component {
             })
         }
         if (this.state.verification) {
-            console.log(this.state);
+            fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',{
+                method: 'post',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(responsne => responsne.json())
+            .then(resp => console.log(resp))
+            .catch(error => console.log(error));
         }
     }
 
@@ -130,9 +145,3 @@ class HomeContact extends React.Component {
 
 
 export default HomeContact;
-
-        //    nameError: "Podane imię jest nieprawidłowe!",
-        //    emailError: "Podany email jest nieprawidłowy!",
-        //    textError: "Wiadomość musi mieć conajmniej 120 znaków!",
-        //    succesText1: "Wiadomość została wysłana!",
-        //    succesText2: "Wkrótce się skontaktujemy."    

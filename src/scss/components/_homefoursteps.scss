@@ -20,11 +20,12 @@
     .homefoursteps__columns__wrapper {
         height: 300px;
         background: $white;
+        display: flex;
 
         .homefoursteps__columns__content__wrapper {
             width: 90%;
             height: 190px;
-            margin: 0 auto;
+            margin: auto auto;
             display: flex;
             justify-content: space-around;
             align-items: center;
