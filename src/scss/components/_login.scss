@@ -1,0 +1,64 @@
+.login__content {
+    width: 500px;
+    height: 400px;
+    margin: 120px auto 0;
+    position: relative;
+
+    .login__title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .svg {
+        width: 240px;
+        height: 36px;
+        background-image: url('../../assets/Decoration.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 26px auto;
+    }
+
+    form {
+        width: 400px;
+        height: 200px;
+        margin: 30px auto 0;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .form__el {
+            width: 300px;
+        
+            input {
+                width: 100%;
+                border-bottom: 1px solid $dark-grey;
+            }
+        }
+    }
+
+    button {
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        border: none;
+        background: white;
+        
+        &:hover {
+            border: 1px solid $dark-grey;
+        }
+    }
+
+    .login {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .signin {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
