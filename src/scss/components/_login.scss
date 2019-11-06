@@ -1,6 +1,6 @@
 .login__content {
     width: 500px;
-    height: 400px;
+    height: 430px;
     margin: 120px auto 0;
     position: relative;
 
@@ -20,7 +20,7 @@
 
     form {
         width: 400px;
-        height: 200px;
+        height: 230px;
         margin: 30px auto 0;
         background: $white;
         display: flex;
@@ -38,7 +38,7 @@
         }
     }
 
-    button {
+    .button {
         width: 120px;
         height: 50px;
         font-size: 18px;
