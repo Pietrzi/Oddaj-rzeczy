@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { connect } from  'react-redux';
+import { signIn } from '../../store/actions/authActions';
 
 class Register extends React.Component {
     constructor(props) {
@@ -100,7 +102,13 @@ class Register extends React.Component {
     
 }
 
-export default Register;
+const mapDispatchToProps = dispatch => {
+    return {
+        signIn: creds => dispatch(signIn(creds))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Register);
 
 // onChange={this.handleChange} type="text" name="name" placeholder="Krzysztof" value={this.state.name}
 // onChange={this.handleChange} type="text" name="email" placeholder="abc@def.pl" value={this.state.email}

@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { connect } from  'react-redux';
+import { signIn } from '../../store/actions/authActions';
 
 class LogIn extends React.Component {
     constructor(props) {
@@ -30,13 +32,14 @@ class LogIn extends React.Component {
                 wrongEmail: '',
                 wrongPass: ''
             })
+            this.props.signIn(this.state);
         }
     }
 
     validate = () => {
 
             const patterns = {
-                email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+                email: /^([a-z\d\.-]+)@([a-z\d-]+).([a-z]{2,8})(\.[a-z]{2,8})?$/,
                 password: /^.{6,}$/
         };
 
@@ -85,4 +88,10 @@ class LogIn extends React.Component {
     
 }
 
-export default LogIn;
+const mapDispatchToProps = dispatch => {
+    return {
+        signIn: creds => dispatch(signIn(creds))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(LogIn);

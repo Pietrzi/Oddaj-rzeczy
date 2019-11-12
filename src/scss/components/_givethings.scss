@@ -1,0 +1,127 @@
+.givethings__wrapper {
+    margin-top: -103px;
+}
+
+.head__wrapper {
+    height: 763px;
+    //margin-top: 30px;
+    margin-right: 70px;
+    display: flex;
+    color: $dark-grey;
+}
+
+.head__picture {
+    width: 45%;
+    height: 100%;
+    background-image: url('../../assets/Header-Form-Background.png');
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.head__content {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .head__titles {
+        font-size: 38px;
+        letter-spacing: -0.75px;
+        text-align: center;
+        padding: 0;
+
+        .first {
+            margin-bottom: 15px;
+        }
+
+        .second {
+            text-transform: uppercase;
+        }
+    }
+
+    .svg {
+        width: 180px;
+        height: 40px;
+        background-image: url('../../assets/Decoration.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 26px;
+        margin-bottom: 45px;
+    }
+
+    .third {
+        font-size: 40px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+
+    .steps__wrapper {
+        width: 650px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .steps {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .step__number {
+                font-size: 32px;
+                font-weight: 300;
+            }
+
+            .step__text {
+                font-size: 22px;
+                font-weight: 300;
+            }
+
+            .border {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 135px;
+                height: 135px;
+                border: 1px solid $dark-grey;
+                //transform: translate(-100%, -100%);
+                transform: rotate(45deg);
+            }
+        }
+
+    }
+
+}
+
+.yellow__box {
+    background: $yellow;
+
+    .p1 {
+        font-size: 36px;
+        font-weight: 500;
+        margin-left: 145px;
+        padding-top: 50px;
+    }
+
+    .p2 {
+        font-size: 22px;
+        font-weight: 300;
+        margin-left: 145px;
+        margin-top: 10px;
+        padding-bottom: 50px;
+    }
+}
+
+.giveform__container {
+    height: 780px;
+    background-image: url('../../assets/Background-Form.jpg');
+    background-position-x: -300px;
+    background-repeat: no-repeat;
+}
