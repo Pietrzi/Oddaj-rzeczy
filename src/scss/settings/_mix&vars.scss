@@ -1,0 +1,9 @@
+@mixin svg-rule {
+        width: 180px;
+        height: 40px;
+        background-image: url('../../assets/Decoration.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 26px auto;
+        //margin-bottom: 45px;
+}
