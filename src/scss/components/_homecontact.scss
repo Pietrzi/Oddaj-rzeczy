@@ -26,17 +26,17 @@
                 font-size: 32px;
             }
 
-            // .form__svg {
-            //     width: 180px;
-            //     height: 40px;
-            //     background-image: url('../../assets/Decoration.svg');
-            //     background-position: center;
-            //     background-repeat: no-repeat;
-            //     margin: 26px auto;
-            // }
             .form__svg {
-                @include svg-rule;
+                width: 180px;
+                height: 40px;
+                background-image: url('../../assets/Decoration.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 26px auto;
             }
+            // .form__svg {
+            //     @include svg-rule;
+            // }
 
             .succes {
                 margin: 0 auto 20px;

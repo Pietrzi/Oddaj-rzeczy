@@ -43,13 +43,13 @@
     }
 
     .svg {
-        // width: 180px;
-        // height: 40px;
-        // background-image: url('../../assets/Decoration.svg');
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // margin-top: 26px;
-        @include svg-rule;
+        width: 180px;
+        height: 40px;
+        background-image: url('../../assets/Decoration.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 26px;
+        // @include svg-rule;
         margin-bottom: 45px;
     }
 
