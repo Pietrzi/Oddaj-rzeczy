@@ -16,9 +16,15 @@ export default class GiveForm extends Component {
         inne: false,
         liczbaWorkow: 0,
         lokalizacja: '',
-        komu: '',
+        komu: {
+            dzieci: false,
+            samotneMatki: false,
+            bezdomni: false,
+            niepelnosprawni: false,
+            osobyStarsze: false
+        },
         organizacja: '',
-        ulica: '',
+        ulica: 'zamkowa',
         miasto: '',
         kodPocztowy: '',
         nrTel: '',

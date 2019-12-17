@@ -15,22 +15,26 @@ export default class Step1 extends Component {
             <div>
                 <h3>Krok 1/4</h3>
                 <form>
-                    <p>Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
+                    <p>Zaznacz co chcesz oddać:</p>
                     <div>
-                        <label>Liczba 60l worków:</label>
-                        <select id="pet-select">
-                            <option value="">-wybierz-</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="6">7</option>
-                            <option value="6">8</option>
-                            <option value="6">9</option>
-                            <option value="6">10</option>
-                        </select>
+                        <input type="checkbox" id="ubraniaDobre" name="ubraniaDobre"></input>
+                        <label for="ubraniaDobre">ubrania, które nadają się do ponownego użycia</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ubraniaZle" name="ubraniaZle"></input>
+                        <label for="ubraniaZle">ubrania, do wyrzucenia</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="zabawki" name="zabawki"></input>
+                        <label for="zabawki">zabawki</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ksiazki" name="ksiazki"></input>
+                        <label for="ksiazki">książki</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="inne" name="inne"></input>
+                        <label for="inne">inne</label>
                     </div>
                     <button onClick={this.continue}>Dalej</button>
                 </form> 
