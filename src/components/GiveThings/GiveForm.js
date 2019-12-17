@@ -62,56 +62,56 @@ export default class GiveForm extends Component {
                             />
                         </div>
                     );
-                    case 2:
-                            return (
-                                <div className="giveform__container">
-                                    <Step2 
-                                    nextStep={this.nextStep}
-                                    prevStep={this.prevStep}
-                                    handleChange={this.handleChange}
-                                    values={values}
-                                    />
-                                </div>
-                            );
-                            case 3:
-                                    return (
-                                        <div className="giveform__container">
-                                            <Step3 
-                                            nextStep={this.nextStep}
-                                            prevStep={this.prevStep}
-                                            handleChange={this.handleChange}
-                                            values={values}
-                                            />
-                                        </div>
-                                    );
-                                    case 4:
-                                            return (
-                                                <div className="giveform__container">
-                                                    <Step4 
-                                                    nextStep={this.nextStep}
-                                                    prevStep={this.prevStep}
-                                                    handleChange={this.handleChange}
-                                                    values={values}
-                                                    />
-                                                </div>
-                                            );
-                                            case 5:
-                                                    return (
-                                                        <div className="giveform__container">
-                                                            <Summary 
-                                                            nextStep={this.nextStep}
-                                                            prevStep={this.prevStep}
-                                                            values={values}
-                                                            />
-                                                        </div>
-                                                    );
-                                                    case 6:
-                                                            return (
-                                                                <div className="giveform__container">
-                                                                    <Thanks />
-                                                                </div>
-                                                            );
-                                                            default: return null;
+            case 2:
+                    return (
+                        <div className="giveform__container">
+                            <Step2 
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                            />
+                        </div>
+                    );
+            case 3:
+                    return (
+                        <div className="giveform__container">
+                            <Step3 
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                            />
+                        </div>
+                    );
+            case 4:
+                    return (
+                        <div className="giveform__container">
+                            <Step4 
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                            />
+                        </div>
+                    );
+            case 5:
+                    return (
+                        <div className="giveform__container">
+                            <Summary 
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            values={values}
+                            />
+                        </div>
+                    );
+            case 6:
+                    return (
+                        <div className="giveform__container">
+                            <Thanks />
+                        </div>
+                    );
+                default: return null;
         }
  
     }
