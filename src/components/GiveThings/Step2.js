@@ -28,8 +28,8 @@ export default class Step2 extends Component {
                             <option value="5">5</option>
                         </select>
                     </div>
-                    <button onClick={this.back}>Poprzednia</button>
-                    <button onClick={this.continue}>Dalej</button>
+                    <input type="submit" onClick={this.back} value="Poprzednia" />
+                    <input type="submit" onClick={this.continue} value="Dalej" />
                 </form>
             </div>
         )

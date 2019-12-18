@@ -60,14 +60,6 @@ export default class GiveForm extends Component {
         });
       };
 
-    //   handleChange = input => e => {
-    //     this.setState({ [input]: e.target.value });
-    //   };
-    // bagsNum = (e) => {
-    //     this.setState({liczbaWorkow: e.target.value});
-    //     console.log(this.state.liczbaWorkow)
-    // }
-
     handleInputChange(event) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;

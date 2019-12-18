@@ -50,8 +50,8 @@ export default class Step4 extends Component {
                             <textarea type="text" id="uwagi" name="uwagi" value={values.uwagi} onChange={handleInputChange}></textarea>
                         </div>
                     </div>
-                    <button onClick={this.back}>Poprzednia</button>
-                    <button onClick={this.continue}>Dalej</button>
+                    <input type="submit" onClick={this.back} value="Poprzednia" />
+                    <input type="submit" onClick={this.continue} value="Dalej" />
                 </form>
             </div>
         )

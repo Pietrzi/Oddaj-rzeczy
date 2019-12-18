@@ -37,7 +37,7 @@ export default class Step1 extends Component {
                         <input type="checkbox" id="inne" name="inne" checked={values.inne} onChange={handleInputChange}></input>
                         <label for="inne">inne</label>
                     </div>
-                    <button onClick={this.continue}>Dalej</button>
+                    <input type="submit" onClick={this.continue} value="Dalej" />
                 </form> 
             </div>
         )
