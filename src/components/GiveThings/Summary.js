@@ -11,11 +11,10 @@ export default class Summary extends Component {
         this.props.prevStep();
       };
     render() {
-        const { ubraniaDobre, ubraniaZle, zabawki, ksiazki, inne, liczbaWorkow, lokalizacja, komu, organizacja, ulica, miasto, kodPocztowy, nrTel, data, godz, uwagi } = this.props.values
+        const { values } = this.props
         return (
             <div>
                 <h1>Summary</h1>
-                {ulica}
                 <button onClick={this.back}>Poprzednia</button>
                 <button onClick={this.continue}>Dalej</button>
             </div>

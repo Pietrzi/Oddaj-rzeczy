@@ -7,32 +7,44 @@ import Summary from './Summary';
 import Thanks from './Thanks';
 
 export default class GiveForm extends Component {
-    state = {
-        step: 1,
-        ubraniaDobre: false,
-        ubraniaZle: false,
-        zabawki: false,
-        ksiazki: false,
-        inne: false,
-        liczbaWorkow: 0,
-        lokalizacja: '',
-        komu: {
+    constructor(props){
+        super(props);
+        this.state = {
+            step: 1,
+            ubraniaDobre: false,
+            ubraniaZle: false,
+            zabawki: false,
+            ksiazki: false,
+            inne: false,
+            liczbaWorkow: 0,
+            lokalizacja: '',
             dzieci: false,
             samotneMatki: false,
             bezdomni: false,
             niepelnosprawni: false,
-            osobyStarsze: false
-        },
-        organizacja: '',
-        ulica: 'zamkowa',
-        miasto: '',
-        kodPocztowy: '',
-        nrTel: '',
-        data: '',
-        godz: '',
-        uwagi: ''
+            osobyStarsze: false,
+            organizacja: '',
+            ulica: '',
+            miasto: '',
+            kodPocztowy: '',
+           nrTel: '',
+            data: '',
+            godz: '',
+            uwagi: ''
+        }
 
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
+ 
+        
+    handleOptionChange = () => {
+        
+        this.setState(prevState =>({
+            dzieci: !prevState.dzieci
+        }))
+        console.log("click");
+    }
+
 
     nextStep = () => {
         const { step } = this.state;
@@ -48,9 +60,23 @@ export default class GiveForm extends Component {
         });
       };
 
-      handleChange = input => e => {
-        this.setState({ [input]: e.target.value });
-      };
+    //   handleChange = input => e => {
+    //     this.setState({ [input]: e.target.value });
+    //   };
+    // bagsNum = (e) => {
+    //     this.setState({liczbaWorkow: e.target.value});
+    //     console.log(this.state.liczbaWorkow)
+    // }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+    
+        this.setState({
+          [name]: value
+        });
+      }
 
     render() {
         const { step } = this.state;
@@ -63,7 +89,7 @@ export default class GiveForm extends Component {
                         <div className="giveform__container">
                             <Step1 
                             nextStep={this.nextStep}
-                            handleChange={this.handleChange}
+                            handleInputChange={this.handleInputChange}
                             values={values}
                             />
                         </div>
@@ -72,9 +98,10 @@ export default class GiveForm extends Component {
                     return (
                         <div className="giveform__container">
                             <Step2 
+                            bagsNum={this.bagsNum}
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
-                            handleChange={this.handleChange}
+                            handleInputChange={this.handleInputChange}
                             values={values}
                             />
                         </div>
@@ -85,7 +112,8 @@ export default class GiveForm extends Component {
                             <Step3 
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
-                            handleChange={this.handleChange}
+                            handleInputChange={this.handleInputChange}
+                            handleOptionChange={this.handleOptionChange}
                             values={values}
                             />
                         </div>
@@ -96,7 +124,7 @@ export default class GiveForm extends Component {
                             <Step4 
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
-                            handleChange={this.handleChange}
+                            handleInputChange={this.handleInputChange}
                             values={values}
                             />
                         </div>

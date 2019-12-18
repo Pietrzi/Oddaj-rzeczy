@@ -11,6 +11,7 @@ export default class Step2 extends Component {
         this.props.prevStep();
       };
     render() {
+        const { values, handleInputChange } = this.props;
         return (
             <div>
                 <h3>Krok 2/4</h3>
@@ -18,7 +19,7 @@ export default class Step2 extends Component {
                 <p>Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
                     <div>
                         <label>Liczba 60l worków:</label>
-                        <select id="pet-select">
+                        <select name="liczbaWorkow" id="pet-select" value={values.liczbaWorkow} onChange={handleInputChange}>
                             <option value="">-wybierz-</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
