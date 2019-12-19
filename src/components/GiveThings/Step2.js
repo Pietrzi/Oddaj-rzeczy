@@ -15,8 +15,8 @@ export default class Step2 extends Component {
         return (
             <div>
                 <h3>Krok 2/4</h3>
-                <form>
-                <p>Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
+                <form className="give__form">
+                <p v>Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
                     <div>
                         <label>Liczba 60l worków:</label>
                         <select name="liczbaWorkow" id="pet-select" value={values.liczbaWorkow} onChange={handleInputChange}>
@@ -28,8 +28,8 @@ export default class Step2 extends Component {
                             <option value="5">5</option>
                         </select>
                     </div>
-                    <input type="submit" onClick={this.back} value="Poprzednia" />
-                    <input type="submit" onClick={this.continue} value="Dalej" />
+                    <input className="form__input left__input" type="submit" onClick={this.back} value="Poprzednia" />
+                    <input className="form__input right__input" type="submit" onClick={this.continue} value="Dalej" />
                 </form>
             </div>
         )

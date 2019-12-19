@@ -15,8 +15,8 @@ export default class Step3 extends Component {
         return (
             <div>
                 <h3>Krok 3/4</h3>
-                <form>
-                    <p>Lokalizacja:</p>
+                <form className="give__form">
+                    <p className="form__steps">Lokalizacja:</p>
                     <div className="select__box">
                         <select name="lokalizacja" id="pet-select" value={values.lokalizacja} onChange={handleInputChange}>
                             <option value="">-wybierz-</option>
@@ -37,8 +37,8 @@ export default class Step3 extends Component {
                     <div className="org__input__box">
                         <input type="text" name="organizacja" value={values.organizacja} onChange={handleInputChange}></input>
                     </div>
-                    <input type="submit" onClick={this.back} value="Poprzednia" />
-                    <input type="submit" onClick={this.continue} value="Dalej" />
+                    <input className="form__input left__input" type="submit" onClick={this.back} value="Poprzednia" />
+                    <input className="form__input right__input" type="submit" onClick={this.continue} value="Dalej" />
                 </form>
             </div>
         )

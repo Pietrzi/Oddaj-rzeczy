@@ -27,7 +27,7 @@ export default class GiveForm extends Component {
             ulica: '',
             miasto: '',
             kodPocztowy: '',
-           nrTel: '',
+            nrTel: '',
             data: '',
             godz: '',
             uwagi: ''

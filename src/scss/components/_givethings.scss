@@ -125,6 +125,14 @@
     background-image: url('../../assets/Background-Form.jpg');
     background-position-x: -300px;
     background-repeat: no-repeat;
+
+    h3 {
+        margin-left: 120px;
+        font-size: 24px;
+        font-weight: 300;
+        position: relative;
+        top: 40px;
+    }
 }
 
 .whom__paragraph {
@@ -148,4 +156,67 @@
 
 .clicked__box {
     background: yellow;
+}
+
+.give__form {
+    height: 560px;
+    margin-top: 140px;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    position: relative;
+
+    .form__steps {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .check__box {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+        .check__input {
+            width: 40px;
+            height: 40px;
+            // z-index: 2;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkbox__custom{
+            position: absolute;
+            left: 0px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+        }
+
+        label {
+            font-size: 24px;
+            font-weight: 300;
+            margin-left: 30px;
+            position: absolute;
+            top: 8px;
+        }
+    }
+
+    .form__input {
+        height: 60px;
+        width: 160px;
+        font-size: 24px;
+        font-weight: 300;
+        background: none;
+        cursor: pointer;
+    }
+
+    .left__input {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .right__input {
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+    }
 }

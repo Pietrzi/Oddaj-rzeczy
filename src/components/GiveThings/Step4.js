@@ -15,7 +15,7 @@ export default class Step4 extends Component {
         return (
             <div>
                 <h3>Krok 4/4</h3>
-                <form>
+                <form className="give__form">
                     <div>
                         <p>Adres odbioru</p>
                         <div>
@@ -50,8 +50,8 @@ export default class Step4 extends Component {
                             <textarea type="text" id="uwagi" name="uwagi" value={values.uwagi} onChange={handleInputChange}></textarea>
                         </div>
                     </div>
-                    <input type="submit" onClick={this.back} value="Poprzednia" />
-                    <input type="submit" onClick={this.continue} value="Dalej" />
+                    <input className="form__input left__input" type="submit" onClick={this.back} value="Poprzednia" />
+                    <input className="form__input right__input" type="submit" onClick={this.continue} value="Dalej" />
                 </form>
             </div>
         )

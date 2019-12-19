@@ -12,8 +12,31 @@ export default class Summary extends Component {
       };
     render() {
         const { values } = this.props
-        const arr = [values.ubraniaDobre, values.ubraniaZle, values.zabawki, values.ksiazki, values.inne]
-        const whatList = arr.map(what => what ? <p>cosik</p> : null)
+        const what = {
+            ubrDob: "",
+            ubrZle: "",
+            zabawki: "",
+            ksiazki: "",
+            inne: ""
+        }
+        if(values.ubraniaDobre) {
+            what.ubrDob = "ubrania w dobrym stanie";
+        }
+        if(values.ubraniaZle) {
+            what.ubrDob = "ubrania do wyrzucenia";
+        }
+        if(values.zabawki) {
+            what.ubrDob = "zabawki";
+        }
+        if(values.ksiazki) {
+            what.ubrDob = "książki";
+        }
+        if(values.inne) {
+            what.ubrDob = "inne";
+        }
+        
+        const arr = Object.values(what)
+        const whatList = arr.map(what => what ? <p>{what}</p> : null)
         return (
             <div>
                 <h1>Summary</h1>
