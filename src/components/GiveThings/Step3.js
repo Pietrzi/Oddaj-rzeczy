@@ -28,14 +28,18 @@ export default class Step3 extends Component {
                         </select>
                     </div>
                     <p className="whom__paragraph">Komu chcesz pomóc</p>
-                    <span className="optional__span" onClick={handleOptionChange}>dzieciom</span>
-                    <span className="optional__span">samotnym matkom</span>
-                    <span className="optional__span">bezdomnym</span>
-                    <span className="optional__span">niepełnosprawnym</span>
-                    <span className="optional__span">osobom starszym</span>
+                    <div className="span__div">
+                        <span className="optional__span" onClick={handleOptionChange}>dzieciom</span>
+                        <span className="optional__span">samotnym matkom</span>
+                        <span className="optional__span">bezdomnym</span>
+                    </div>
+                    <div className="span__div">
+                        <span className="optional__span">niepełnosprawnym</span>
+                        <span className="optional__span">osobom starszym</span>
+                    </div>
                     <p className="which__org__paragraph">Wpisz nazwę konkretnej organizacji(opcjonalnie)</p>
                     <div className="org__input__box">
-                        <input type="text" name="organizacja" value={values.organizacja} onChange={handleInputChange}></input>
+                        <input className="org__input" type="text" name="organizacja" value={values.organizacja} onChange={handleInputChange}></input>
                     </div>
                     <input className="form__input left__input" type="submit" onClick={this.back} value="Poprzednia" />
                     <input className="form__input right__input" type="submit" onClick={this.continue} value="Dalej" />

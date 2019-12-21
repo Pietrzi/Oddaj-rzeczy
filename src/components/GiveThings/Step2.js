@@ -16,9 +16,9 @@ export default class Step2 extends Component {
             <div>
                 <h3>Krok 2/4</h3>
                 <form className="give__form">
-                <p v>Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
+                <p className="form__steps">Podaj liczbę 60l worków w którą spakowałeś/aś rzeczy:</p>
                     <div>
-                        <label>Liczba 60l worków:</label>
+                        <label className="label2">Liczba 60l worków:</label>
                         <select name="liczbaWorkow" id="pet-select" value={values.liczbaWorkow} onChange={handleInputChange}>
                             <option value="">-wybierz-</option>
                             <option value="1">1</option>
