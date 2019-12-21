@@ -1,3 +1,5 @@
+@import '../settings/colors';
+
 .givethings__wrapper {
     margin-top: -103px;
 }
@@ -158,6 +160,36 @@
     border: 1px solid black;
 }
 
+#dzieci {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#samotneMatki {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#bezdomni {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#niepelnosprawni {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#starsi {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
 .which__org__paragraph {
     margin-bottom: 20px;
     font-size: 24px;
@@ -175,7 +207,7 @@
 }
 
 .clicked__box {
-    background: yellow;
+    background: $yellow;
 }
 
 .give__form {
@@ -246,5 +278,18 @@
         position: absolute;
         bottom: 0;
         left: 200px;
+    }
+}
+
+.step4__form {
+    display: flex;
+
+    .step4__text {
+        font-size: 24x;
+    }
+
+    .label4 {
+        font-size: 24px;
+        font-weight: 300;
     }
 }
