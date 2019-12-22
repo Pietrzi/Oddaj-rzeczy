@@ -212,7 +212,7 @@
 
 .give__form {
     height: 560px;
-    margin-top: 140px;
+    margin-top: 130px;
     margin-bottom: 50px;
     margin-left: 100px;
     position: relative;
@@ -318,4 +318,73 @@
             border: 1px solid black;
         }
     }
+}
+
+.summary__title {
+    margin-left: 100px;
+    font-size: 36px;
+    position: relative;
+    top: 60px;
+}
+
+.left__summ__box {
+    margin-right: 50px;
+}
+
+.summary__info__box {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.summary__text {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.summary__span {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.left__span {
+    width: 110px;
+    margin-right: 20px;
+}
+
+.spans__box{
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum__wrap {
+    display: flex;
+
+    .tshirt__icon {
+        width: 50px;
+        height: 50px;
+        background-image: url('../../assets/shirt.png');
+        margin-right: 20px;
+    }
+
+    .arrow__icon {
+        width: 50px;
+        height: 50px;
+        background-image: url('../../assets/arrow.png');
+        margin-right: 20px;
+    }
+}
+
+.thanks__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanks__title {
+    font-size: 88px;
 }

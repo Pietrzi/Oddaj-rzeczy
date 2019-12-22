@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { relative } from 'path';
 
 export default class Summary extends Component {
     continue = e => {
@@ -36,49 +37,58 @@ export default class Summary extends Component {
         }
         
         const arr = Object.values(what)
-        const whatList = arr.map(what => what ? <p>{what}</p> : null)
+        const whatList = arr.map(what => what ? <span>{what}</span> : null)
         return (
             <div>
-                <h3>Summary</h3>
-                <form>
-                <p>Oddajesz:</p>
-                <p>{ values.liczbaWorkow } worki, { whatList }</p>
-                <div>
-                    <p>Adres odbioru</p>
-                    <div>
-                        <span>Ulica</span>
-                        <span>{ values.ulica }</span>
+                <p  className="summary__title">Podsumowanie Twojej darowizny</p>
+                <form  className="give__form">
+                <p className="summary__text">Oddajesz:</p>
+                <div className="sum__wrap">
+                    <div className="tshirt__icon"></div>
+                    <p className="summary__text">{ values.liczbaWorkow } worki, { whatList }</p>
+                </div>
+                <div className="sum__wrap">
+                    <div className="arrow__icon"></div>
+                    <p className="summary__text">dla lokalizacji: {values.lokalizacja}</p>
+                </div>
+                <div className="summary__info__box">
+                <div className="left__sum__box">
+                    <p className="summary__text">Adres odbioru</p>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Ulica</span>
+                        <span className="summary__span">{ values.ulica }</span>
                     </div>
-                    <div>
-                        <span>Miasto</span>
-                        <span>{ values.miasto }</span>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Miasto</span>
+                        <span className="summary__span">{ values.miasto }</span>
                     </div>
-                    <div>
-                        <span>Kod Pocztowy</span>
-                        <span>{ values.kodPocztowy }</span>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Kod Pocztowy</span>
+                        <span className="summary__span">{ values.kodPocztowy }</span>
                     </div>
-                    <div>
-                        <span>Numer telefonu</span>
-                        <span>{ values.nrTel }</span>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Numer telefonu</span>
+                        <span className="summary__span">{ values.nrTel }</span>
                     </div>
                 </div>
                 <div>
-                    <p>Adres odbioru</p>
-                    <div>
-                        <span>Data</span>
-                        <span>{ values.data }</span>
+                    <p className="summary__text">Adres odbioru</p>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Data</span>
+                        <span className="summary__span">{ values.data }</span>
                     </div>
-                    <div>
-                        <span>Godzina</span>
-                        <span>{ values.godz }</span>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Godzina</span>
+                        <span className="summary__span">{ values.godz }</span>
                     </div>
-                    <div>
-                        <span>Uwagi dla kuriera</span>
-                        <span>{ values.uwagi }</span>
+                    <div className="spans__box">
+                        <span className="summary__span left__span">Uwagi dla kuriera</span>
+                        <span className="summary__span">{ values.uwagi }</span>
                     </div>
                 </div>
-                <input type="submit" onClick={this.back} value="Poprzednia" />
-                <input type="submit" onClick={this.continue} value="Potwierdzam" />
+                </div>
+                <input className="form__input left__input" type="submit" onClick={this.back} value="Poprzednia" />
+                <input className="form__input right__input" type="submit" onClick={this.continue} value="Potwierdzam" />
                 </form>
             </div>
         )
