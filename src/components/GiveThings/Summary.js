@@ -39,7 +39,8 @@ export default class Summary extends Component {
         const whatList = arr.map(what => what ? <p>{what}</p> : null)
         return (
             <div>
-                <h1>Summary</h1>
+                <h3>Summary</h3>
+                <form>
                 <p>Oddajesz:</p>
                 <p>{ values.liczbaWorkow } worki, { whatList }</p>
                 <div>
@@ -78,6 +79,7 @@ export default class Summary extends Component {
                 </div>
                 <input type="submit" onClick={this.back} value="Poprzednia" />
                 <input type="submit" onClick={this.continue} value="Potwierdzam" />
+                </form>
             </div>
         )
     }

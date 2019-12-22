@@ -18,37 +18,37 @@ export default class Step4 extends Component {
                 <form className="give__form">
                     <p className="form__steps">Podaj adres oraz termin odbioru rzeczy przez kuriera</p>
                     <div className="step4__form">
-                    <div>
+                    <div className="form4__left">
                         <p className="step4__text">Adres odbioru:</p>
-                        <div>
+                        <div className="input4__box">
                             <label className="label4" for="">Ulica</label>
                             <input type="text" id="ulica" name="ulica" value={values.ulica} onChange={handleInputChange}></input>
                         </div>
-                        <div>
-                            <label for="">Miasto</label>
+                        <div className="input4__box">
+                            <label className="label4" for="">Miasto</label>
                             <input type="text" id="miasto" name="miasto" value={values.miasto} onChange={handleInputChange}></input>
                         </div>
-                        <div>
-                            <label for="">Kod Pocztowy</label>
+                        <div className="input4__box">
+                            <label className="label4" for="">Kod Pocztowy</label>
                             <input type="text" id="" name="kodPocztowy" value={values.kodPocztowy} onChange={handleInputChange}></input>
                         </div>
-                        <div>
-                            <label for="">Numer Telefonu</label>
+                        <div className="input4__box">
+                            <label className="label4" for="">Numer Telefonu</label>
                             <input type="text" id="nrTel" name="nrTel" value={values.nrTel} onChange={handleInputChange}></input>
                         </div>
                     </div>
                     <div>
-                        <p>Termin odbioru:</p>
-                        <div>
-                            <label for="">Data</label>
+                        <p className="step4__text">Termin odbioru:</p>
+                        <div className="input4__box">
+                            <label className="label4" for="">Data</label>
                             <input type="text" id="data" name="data" value={values.data} onChange={handleInputChange}></input>
                         </div>
-                        <div>
-                            <label for="">Godzina</label>
+                        <div className="input4__box">
+                            <label className="label4" for="">Godzina</label>
                             <input type="text" id="godz" name="godz" value={values.godz} onChange={handleInputChange}></input>
                         </div>
-                        <div>
-                            <label for="">Uwagi dla kuriera</label>
+                        <div className="input4__box">
+                            <label className="label4" for="">Uwagi dla kuriera</label>
                             <textarea type="text" id="uwagi" name="uwagi" value={values.uwagi} onChange={handleInputChange}></textarea>
                         </div>
                     </div>
