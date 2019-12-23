@@ -7,21 +7,31 @@ import LogIn from './components/LogIn/LogIn'
 import LogOut from './components/LogOut/LogOut';
 import Register from './components/Register/Register';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/oddaj-rzeczy' component={GiveThings}/>
-          <Route path='/logowanie' component={LogIn}/>
-          <Route path='/wylogowano' component={LogOut}/>
-          <Route path='/rejestracja' component={Register}/>
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
+class App extends React.Component {
+    constructor(props) {
+      super(props);
+        this.state = {
+          logged: false
+        }
+    }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/oddaj-rzeczy' component={GiveThings}/>
+            <Route path='/logowanie' component={LogIn}/>
+            <Route path='/wylogowano' component={LogOut}/>
+            <Route path='/rejestracja' component={Register}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
+  
 }
 
 export default App;

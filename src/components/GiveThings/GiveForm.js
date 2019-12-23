@@ -37,12 +37,41 @@ export default class GiveForm extends Component {
     }
  
         
-    handleOptionChange = () => {
-        
-        this.setState(prevState =>({
-            dzieci: !prevState.dzieci
-        }))
-        console.log("click");
+    handleOptionChange = e => {
+        e.target.classList.toggle('clicked__box')
+        switch (e.target.id) {
+            case "dzieci":
+                    return (
+                        this.setState(prevState =>({
+                            dzieci: !prevState.dzieci
+                        }))
+                    );
+            case "samotneMatki":
+                    return (
+                        this.setState(prevState =>({
+                            samotneMatki: !prevState.samotneMatki
+                        }))
+                    );
+            case "bezdomni":
+                    return (
+                        this.setState(prevState =>({
+                            bezdomni: !prevState.bezdomni
+                        }))
+                    );
+            case "niepelnosprawni":
+                    return (
+                        this.setState(prevState =>({
+                            niepelnosprawni: !prevState.niepelnosprawni
+                        }))
+                    );
+            case "starsi":
+                    return (
+                        this.setState(prevState =>({
+                            osobyStarsze: !prevState.osobyStarsze
+                        }))
+                    );
+                default: return null;
+        }
     }
 
 
