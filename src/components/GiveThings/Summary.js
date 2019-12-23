@@ -21,23 +21,54 @@ export default class Summary extends Component {
             inne: ""
         }
         if(values.ubraniaDobre) {
-            what.ubrDob = "ubrania w dobrym stanie";
+            what.ubrDob = ", ubrania w dobrym stanie";
         }
         if(values.ubraniaZle) {
-            what.ubrDob = "ubrania do wyrzucenia";
+            what.ubrZle = ", ubrania do wyrzucenia";
         }
         if(values.zabawki) {
-            what.ubrDob = "zabawki";
+            what.zabawki = ", zabawki";
         }
         if(values.ksiazki) {
-            what.ubrDob = "książki";
+            what.ksiażki = ", książki";
         }
         if(values.inne) {
-            what.ubrDob = "inne";
+            what.inne = ", inne";
+        }
+
+        const whom = {
+            dzieciom: "",
+            samotnymMatkom: "",
+            bezdomnym: "",
+            niepelnosprawnym: "",
+            osobomStarszym: ""
+        }
+
+        if(values.dzieci) {
+            whom.dzieciom = ", dzieciom";
+        }
+        if(values.bezdomni) {
+            whom.bezdomnym = ", bezdomnym";
+        }
+        if(values.samotneMatki) {
+            whom.samotnymMatkom = ", samotnym matkom";
+        }
+        if(values.niepelnosprawni) {
+            whom.niepelnosprawnym = ", niepełnosprawnym";
+        }
+        if(values.osobyStarsze) {
+            whom.osobomStarszym = ", osobom starszym";
         }
         
-        const arr = Object.values(what)
-        const whatList = arr.map(what => what ? <span>{what}</span> : null)
+        const arr1 = Object.values(what)
+        const whatList = arr1.map(what => what ? <span>{what}</span> : null)
+
+        const arr2 = Object.values(whom)
+        const whomList = arr2.map(whom => whom ? <span>{whom}</span> : null)
+
+        let organizacja = values.organizacja ? <span>{values.organizacja}</span> : null;
+
+        console.log(whom)
         return (
             <div>
                 <p  className="summary__title">Podsumowanie Twojej darowizny</p>
@@ -45,11 +76,11 @@ export default class Summary extends Component {
                 <p className="summary__text">Oddajesz:</p>
                 <div className="sum__wrap">
                     <div className="tshirt__icon"></div>
-                    <p className="summary__text">{ values.liczbaWorkow } worki, { whatList }</p>
+                    <p className="summary__text">{ values.liczbaWorkow } worki{ whatList }{whomList}</p>
                 </div>
                 <div className="sum__wrap">
                     <div className="arrow__icon"></div>
-                    <p className="summary__text">dla lokalizacji: {values.lokalizacja}</p>
+                    <p className="summary__text">dla lokalizacji: {values.lokalizacja} {organizacja}</p>
                 </div>
                 <div className="summary__info__box">
                 <div className="left__sum__box">
