@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { relative } from 'path';
+import React, { Component } from 'react';
 
 export default class Summary extends Component {
     continue = e => {
