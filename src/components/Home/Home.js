@@ -6,7 +6,7 @@ import HomeHelp from './HomeHelp/HomeHelp';
 import HomeAbout from './HomeAbout/HomeAbout';
 import HomeContact from './HomeContact/HomeContact';
 
-export default function home() {
+const home = () => {
     return (
         <div>
             <HomeHeader />
@@ -18,3 +18,5 @@ export default function home() {
         </div>
     )
 }
+
+export default home;
