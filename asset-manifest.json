@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Oddaj-rzeczy/static/css/main.69783dce.chunk.css",
-    "main.js": "/Oddaj-rzeczy/static/js/main.4cac5c5b.chunk.js",
-    "main.js.map": "/Oddaj-rzeczy/static/js/main.4cac5c5b.chunk.js.map",
+    "main.js": "/Oddaj-rzeczy/static/js/main.d8c92048.chunk.js",
+    "main.js.map": "/Oddaj-rzeczy/static/js/main.d8c92048.chunk.js.map",
     "runtime-main.js": "/Oddaj-rzeczy/static/js/runtime-main.b78ec139.js",
     "runtime-main.js.map": "/Oddaj-rzeczy/static/js/runtime-main.b78ec139.js.map",
     "static/css/2.c114a28c.chunk.css": "/Oddaj-rzeczy/static/css/2.c114a28c.chunk.css",
     "static/js/2.4e29613f.chunk.js": "/Oddaj-rzeczy/static/js/2.4e29613f.chunk.js",
     "static/js/2.4e29613f.chunk.js.map": "/Oddaj-rzeczy/static/js/2.4e29613f.chunk.js.map",
     "index.html": "/Oddaj-rzeczy/index.html",
-    "precache-manifest.2c0536fc988829ad998148412464bb8d.js": "/Oddaj-rzeczy/precache-manifest.2c0536fc988829ad998148412464bb8d.js",
+    "precache-manifest.7f820d06030f20e333e846fa3b86fcbb.js": "/Oddaj-rzeczy/precache-manifest.7f820d06030f20e333e846fa3b86fcbb.js",
     "service-worker.js": "/Oddaj-rzeczy/service-worker.js",
     "static/css/2.c114a28c.chunk.css.map": "/Oddaj-rzeczy/static/css/2.c114a28c.chunk.css.map",
     "static/css/main.69783dce.chunk.css.map": "/Oddaj-rzeczy/static/css/main.69783dce.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.c114a28c.chunk.css",
     "static/js/2.4e29613f.chunk.js",
     "static/css/main.69783dce.chunk.css",
-    "static/js/main.4cac5c5b.chunk.js"
+    "static/js/main.d8c92048.chunk.js"
   ]
 }
